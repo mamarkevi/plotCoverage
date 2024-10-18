@@ -1,6 +1,7 @@
-#' @param sid
-#' @param jxn
-#' @param gene.grange
+#' Recounting of coordinates
+#' @param sid ID of sequence
+#' @param jxn number of junction
+#' @param gene.grange generange info
 #'
 #' @export
 getRecountCov = function(sid,jxn,gene.grange){

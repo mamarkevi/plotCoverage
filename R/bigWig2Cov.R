@@ -1,4 +1,4 @@
-#'
+#'Conversion the file in bigWig format to list of gene coverage
 #' @param bw annotation file
 #'
 #' @export

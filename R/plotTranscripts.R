@@ -1,9 +1,10 @@
-#' @param a gene data fron ensemble gtf annotation which transcripts are plotted
+#' Plots transcripts for considered gene
+#' @param a gene data from ensemble gtf annotation which transcripts are plotted
 #' @param ylim,xlim see \code{\link{plot}}
 #' @param xlab see \code{\link{plot}}
 #' @param reverse reverse x coordinates
-#' @param new
-#' @param yspace
+#' @param new if to plot novel transcripts TRUE|FALSE
+#' @param yspace space in height
 #' @param exon.col color of exon border/fill
 #' @param cds.col color CDS line
 #' @param text.cex see \code{\link{plot}}
