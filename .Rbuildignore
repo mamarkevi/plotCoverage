@@ -1,2 +1,2 @@
-^plotCoverage\.Rproj$
+^.*\.Rproj$
 ^\.Rproj\.user$
