@@ -1,3 +1,15 @@
+#' @param a gene data fron ensemble gtf annotation which transcripts are plotted
+#' @param ylim,xlim see \code{\link{plot}}
+#' @param xlab see \code{\link{plot}}
+#' @param reverse reverse x coordinates
+#' @param new
+#' @param yspace
+#' @param exon.col color of exon border/fill
+#' @param cds.col color CDS line
+#' @param text.cex see \code{\link{plot}}
+#' @param ... other parameters for plot function
+#'
+#' @export
 plotTranscripts = function(a,
                            ylim=c(0,length(unique(a$transcript_id))),
                            xlim=c(ifelse(a$strand[1]=='+',min(a$start),max(a$stop)),ifelse(a$strand[1]=='+',max(a$stop),min(a$start))),
@@ -5,18 +17,18 @@ plotTranscripts = function(a,
                            new=TRUE,yspace=0.8,exon.col='black',cds.col='black',
                            text.cex = 0.7,
                            ...){
-  
+
   if(!is.na(exon.col))
     a$exon.col = exon.col
   if(!is.na(cds.col))
     a$cds.col = cds.col
-  
+
   transc = split(a,a$transcript_id)
   transc = transc[order(sapply(transc,function(x){max(x$stop)-min(x$start)}))]
   if(new)
     plot(1,t='n',xlim=xlim,ylim=ylim,yaxt='n',ylab='',xlab=xlab,...)
   ystep = (ylim[2]-ylim[1])/length(transc)
-  
+
   for(i in 1:length(transc)){
     y = ylim[1] + ystep*i - ystep/2
     t = transc[[i]]

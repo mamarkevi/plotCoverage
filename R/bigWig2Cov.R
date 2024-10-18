@@ -1,3 +1,7 @@
+#'
+#' @param bw annotation file
+#'
+#' @export
 bigWig2Cov = function(bw){
   bw = as.data.frame(bw)
   bw = bw[order(bw$start),]

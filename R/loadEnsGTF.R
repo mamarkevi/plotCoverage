@@ -1,3 +1,8 @@
+#' @param f file with ensemble annotation
+#' @param features
+#'
+#' @export
+
 loadEnsGTF = function(f,features=NULL){
   r = read.table(f,sep='\t')
   if(!is.null(features ))
