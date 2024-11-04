@@ -3,11 +3,11 @@
 #' @param r read coverage; output of \code{\link{getReadCoverage}}
 #' @param min.junc.cov numeric, plots only junctions (introns) with coverage not less than \code{min.junc.cov}
 #' @param min.junc.cov.f numeric, plots only junctions (introns) with coverage not less than \code{min.junc.cov.f} of maximal coverage in the region
-#' @param plot.junc.only.within logical, plot only juction with both ends within the region, FALSE plots all junctions with at least one end within region. NA plot all junctions overlapping the region.
+#' @param plot.junc.only.within logical, plot only junction with both ends within the region, FALSE plots all junctions with at least one end within region. NA plot all junctions overlapping the region.
 #' @param ylim,xlim see \code{\link{plot}}
 #' @param reverse reverse x coordinates
-#' @param junc.col colour for junction line. Individual color could be specified for each junction
-#' @param junc.lwd line width for jucntion line
+#' @param junc.col color for junction line. Individual color could be specified for each junction
+#' @param junc.lwd line width for junction line
 #' @param ... other parameters for plot function
 #'
 #' @export

@@ -1,6 +1,6 @@
 #' Extract read coverage from bam files
 #'
-#' @param bams character vector with paths to bam files
+#' @param bams character vector with paths to bam-files (bai-files requires to be storage in the same directory)
 #' @param chr contig name
 #' @param start,end coordinates of region
 #' @param strand strand, NA for unstranded (default)

@@ -1,6 +1,6 @@
 #' Loading of genome annotation in ensemble format 
 #' @param f path to file with ensemble annotation
-#' @param features
+#' @param features features for extraction
 #'
 #' @export
 

@@ -3,7 +3,7 @@
 #' @param ylim,xlim see \code{\link{plot}}
 #' @param xlab see \code{\link{plot}}
 #' @param reverse reverse x coordinates
-#' @param new if to plot novel transcripts TRUE|FALSE
+#' @param new logical: if to plot transcripts as new plot  TRUE|FALSE
 #' @param yspace space in height
 #' @param exon.col color of exon border/fill
 #' @param cds.col color CDS line

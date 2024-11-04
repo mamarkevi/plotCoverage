@@ -1,5 +1,5 @@
 #' Returns the summary coverage for region
-#' @param l
+#' @param l region
 #'
 #' @export
 
