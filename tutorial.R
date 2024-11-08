@@ -21,7 +21,7 @@ cov = getReadCoverage(c1,
 
 ymax=max(cov$cov,cov$juncs$score)
 plotReadCov(cov,ylim=c(-0.4*ymax,ymax),bty='n',min.junc.cov.f = 0.05,xlab='7',ylab='Coverage',
-            xlim = c(91987000,91993000)) # ylim to leave space for annotation
+            xlim = c(cov$start,cov$end)) # ylim to leave space for annotation
 
 plotTranscripts(gtf[gtf$gene_name=='AKAP9',],ylim = c(-0.4*ymax,-0.05*ymax),new = F)
 
@@ -33,7 +33,7 @@ cov = getReadCoverage(c2,
 
 ymax=max(cov$cov,cov$juncs$score)
 plotReadCov(cov,ylim=c(-0.4*ymax,ymax),bty='n',min.junc.cov.f = 0.05,xlab='7',ylab='Coverage',
-            xlim = c(91987000,91993000)) # ylim to leave space for annotation
+            xlim = c(cov$start,cov$end)) # ylim to leave space for annotation
 # transcripts as 
 plotTranscripts(gtf[gtf$gene_name=='AKAP9',],ylim = c(-0.4*ymax,-0.05*ymax),new = F)
 
