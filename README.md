@@ -1,4 +1,4 @@
-# PlotCoverage: a method for visualization of read gene covarage in bulk transcriptomics data
+# PlotCoverage: a method for visualization of read gene covarage in bulk or single-cell RNA-seq data
 
 PlotCoverage is R package, included functions calculation and visualization of gene coverage for specified genome coordinates in bulk RNA-seq data.
 This method supports multigroup analysis.  
@@ -16,10 +16,9 @@ devtools::install_github("mamarkevi/plotCoverage")
 
 ```
 
-Load package after installation:
+## Usage 
+1. [Bulk example](tutorial.R)
+2. [Single cell example](vignettes/scPlotCoverage.md)
 
-```{r}
-library(plotCoverage)
-```
 ## Input
 The input of PlotCoverage must be sorted bam-files of RNA-Seq read alignment and bam index-files. It allows to combine files into different groups to define differences of gene coverage between conditions.  
