@@ -9,7 +9,7 @@
 #'
 #' @return list with three items: x (chr coordinates); cov - number of reads mapped to chr position; juncs - data.frame with introns
 #' @export
-getReadCoverage = function(bams,chr,start,end,strand=NA,scanBamFlags=list(),tagFilter=list()){
+getReadCoverage = function(bams,chr,start,end,strand=NA,scanBamFlags=list(),tagFilter=list(),verbose=FALSE){
   require(GenomicAlignments)
   if(start>end){
     t = start
@@ -27,7 +27,8 @@ getReadCoverage = function(bams,chr,start,end,strand=NA,scanBamFlags=list(),tagF
   param = ScanBamParam(flag=flags,which=GRanges(chr, IRanges(start, end)),tagFilter = tagFilter)
   i = 1
   for(b in bams){
-    cat('\r',i,'     ')
+    if(verbose)
+      cat('\r',i,'     ')
     i = i + 1
     bam = readGAlignments(b,param = param)
     cov=coverage(bam)[[chr]][start:end]
