@@ -35,9 +35,10 @@ plotReadCov = function(r,min.junc.cov=0,min.junc.cov.f=0,plot.junc.only.within=F
     ylim = c(-bottom.mar*ylim[2],ylim[2])
   }
   r$juncs = r$juncs[r$juncs$score >= min.junc.cov.f * ylim[2],]
+  xlim_ = xlim
   if(reverse)
-    xlim=rev(xlim)
-  plot(r$x,r$cov,t='n',ylim=ylim,xlim=xlim,yaxt='n',...)
+    xlim_=rev(xlim_)
+  plot(r$x,r$cov,t='n',ylim=ylim,xlim=xlim_,yaxt='n',...)
   axis(2,at=c(0,ylim[2]),labels = c('',ylim[2]))
   polygon(r$x,r$cov,col = 'gray',border=NA)
   if(nrow(r$juncs)>0)
